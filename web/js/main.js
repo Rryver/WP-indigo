@@ -1,0 +1,5 @@
+let qwe = "wqe";
+
+$(function () {
+
+})

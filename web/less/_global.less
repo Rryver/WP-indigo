@@ -1,0 +1,42 @@
+html,
+body {
+	height: 100%;
+	font-family: @font-family-common;
+	font-style: normal;
+	font-size: 16px;
+	font-weight: @font-weight-text;
+	color: @color-grey;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+
+.hyperlink {
+	.font-body();
+	display: inline-block;
+	font-weight: @font-weight-text;
+	border-bottom: 1px solid @color-grey;
+	color: @color-grey;
+
+	&:hover {
+		
+	}
+}

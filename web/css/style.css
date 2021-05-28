@@ -160,9 +160,6 @@ body {
   cursor: pointer;
   background: #3F51B5;
 }
-.link-svg:hover {
-  fill: #3F51B5;
-}
 .header {
   text-align: center;
   padding: 45px 0;
@@ -191,6 +188,23 @@ body {
   background: #3F51B5;
   color: #FFFFFF;
 }
+.card-person {
+  text-align: center;
+}
+.card-person__image {
+  display: inline-block;
+  border-radius: 50%;
+}
+.card-person__name {
+  margin-top: 30px;
+}
+.card-person__text {
+  display: block;
+  margin-top: 30px;
+}
+.card-person__social {
+  margin-top: 25px;
+}
 .social__item {
   display: inline-block;
   margin-right: 25px;
@@ -198,18 +212,37 @@ body {
 .social__item:last-child {
   margin-right: 0;
 }
-.social__icon {
-  fill: #3F51B5;
-}
-.social__icon:hover {
+.social__link:hover .social__icon > path {
   fill: #3F51B5;
 }
 .footer {
-  padding: 60px 0px;
+  padding: 60px 0;
+}
+.footer__split-line {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: #F0F0F0;
+}
+.footer__split-line:after {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  content: "";
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  border: 3px solid #F0F0F0;
 }
 .footer__copyright {
   font-size: 13px;
   line-height: 1.307em;
   display: block;
   text-align: center;
+  margin-top: 60px;
 }

@@ -1,0 +1,27 @@
+.nav-menu {
+    display: inline-block;
+
+    &__list {
+        display: inline-block;
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: 45px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        .font-body();
+        padding: 4px 9px;
+        background: transparent;
+
+        &:hover {
+            background: @color-accent;
+            color: @color-white;
+        }
+    }
+}

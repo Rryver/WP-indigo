@@ -11,18 +11,23 @@ body {
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
+	min-height: 50%;
 }
 
 .main {
 	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	min-height: 100%;
 }
 .footer {
 	flex: 0 0 auto;
 }
 
 .container{
-  max-width: 1200px;
+  max-width: 586px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -37,6 +42,27 @@ body {
 	color: @color-grey;
 
 	&:hover {
-		
+		color: @color-accent;
+		border-color: @color-accent;
+	}
+}
+
+.btn-common {
+	.font-body();
+	background: @color-grey;
+	padding: 11px 30px;
+	color: @color-white;
+	border: none;
+	outline: none;
+
+	&:hover {
+		cursor: pointer;
+		background: @color-accent;
+	}
+}
+
+.link-svg {
+	&:hover {
+		fill: @color-accent;
 	}
 }

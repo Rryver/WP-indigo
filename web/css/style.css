@@ -51,7 +51,7 @@ dl,
 dd {
   margin: 0;
 }
-ul[class] {
+ul {
   list-style: none;
 }
 img {
@@ -107,13 +107,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 70%;
+  min-height: 60%;
 }
 .main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .footer {
   -webkit-box-flex: 0;
@@ -150,6 +159,15 @@ body {
   cursor: pointer;
   background: #3F51B5;
 }
+.text-list > li:before {
+  display: inline-block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #555555;
+  border-radius: 50%;
+  margin-right: 12px;
+}
 .header {
   text-align: center;
   padding: 45px 0;
@@ -182,13 +200,20 @@ body {
 .nav-menu__link:hover {
   outline: 1px solid #3F51B5;
 }
-.person-preview_middle-of-screen {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto;
+.person-preview_on_middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .card-person {
   text-align: center;
@@ -217,6 +242,27 @@ body {
 .social__link:hover .social__icon > path {
   fill: #3F51B5;
 }
+.about__title {
+  text-align: center;
+}
+.about__description {
+  margin-top: 26px;
+}
+.ad-info {
+  margin-top: 30px;
+}
+.ad-info__list {
+  margin-top: 15px;
+}
+.ad-info__list > li:before {
+  display: inline-block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #555555;
+  border-radius: 50%;
+  margin-right: 12px;
+}
 .footer {
   padding: 60px 0;
 }
@@ -232,14 +278,15 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  top: -4px;
   bottom: 0;
   margin: 0 auto;
   content: "";
-  width: 29px;
-  height: 29px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  border: 3px solid #F0F0F0;
+  background: #ffffff;
+  border: 1px solid #F0F0F0;
 }
 .footer__copyright {
   font-size: 13px;

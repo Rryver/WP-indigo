@@ -5,7 +5,7 @@
 $this->title = 'My Yii Application';
 ?>
 
-<section class="person-preview person-preview_middle-of-screen">
+<section class="person-preview">
   <div class="container">
       <?= $this->render("@views/layouts/card-person") ?>
   </div>

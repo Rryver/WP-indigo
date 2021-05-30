@@ -11,16 +11,14 @@ body {
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	min-height: 70%;
+	min-height: 60%;
 }
 
 .main {
 	flex: 1 0 auto;
-	//display: flex;
-	//flex-direction: column;
-	//justify-content: flex-end;
-	//align-items: center;
-	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 .footer {
 	flex: 0 0 auto;
@@ -58,5 +56,19 @@ body {
 	&:hover {
 		cursor: pointer;
 		background: @color-accent;
+	}
+}
+
+
+.text-list {
+
+	& > li:before {
+		display: inline-block;
+		content: "";
+		width: 12px;
+		height: 12px;
+		background: @color-grey-2;
+		border-radius: 50%;
+		margin-right: 12px;
 	}
 }

@@ -29,10 +29,11 @@ $this->title = 'About';
           est laborum.
         </p>
 
-        <?php if (Yii::$app->user->isGuest) { ?>
+        <?php if (!Yii::$app->user->isGuest) { ?>
             <div class="description__edit">
               <button class="description__edit-button btn-edit btn btn-default">Change description</button>
-              button.
+              <button class="description__edit-cance btn btn-danger hidden">Cancel</button>
+              <button class="description__edit-save btn btn-success hidden">Save</button>
             </div>
         <?php } ?>
       </div>

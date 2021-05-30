@@ -125,4 +125,12 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionBlog () {
+        return $this->render('blog');
+    }
+
+    public function actionPost() {
+        return $this->render('post');
+    }
 }

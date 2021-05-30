@@ -12,16 +12,21 @@
         &:last-child {
             margin-right: 0;
         }
+
+        &_active > .nav-menu__link {
+            background: @color-accent;
+            color: @color-white;
+        }
     }
 
     &__link {
         .font-body();
         padding: 4px 9px;
         background: transparent;
+        color: @color-grey;
 
         &:hover {
-            background: @color-accent;
-            color: @color-white;
+            outline: 1px solid @color-accent;
         }
     }
 }

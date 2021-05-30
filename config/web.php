@@ -14,6 +14,11 @@ $config = [
         '@imgs' => '@app/web/images',
     ],
     'components' => [
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+//            'enableStrictParsing' => true,
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'Cd0X770zTp0ay4FE-OGOhA-IDFehaQeN',

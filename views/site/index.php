@@ -4,10 +4,12 @@
 
 $this->title = 'My Yii Application';
 ?>
-<div class="container">
-  <section class="person-preview">
-    <?= $this->render("@views/layouts/card-person") ?>
-  </section>
-</div>
+
+<section class="person-preview person-preview_middle-of-screen">
+  <div class="container">
+      <?= $this->render("@views/layouts/card-person") ?>
+  </div>
+</section>
+
 
 

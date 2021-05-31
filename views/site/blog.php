@@ -14,30 +14,58 @@
   </section>
 
   <div class="container">
-    <?= $this->render("@views/layouts/split-line") ?>
+      <?= $this->render("@views/layouts/split-line") ?>
   </div>
 
   <section class="posts">
-    <ul class="posts__list">
-      <li class="posts__item">
-        <a class="posts__link" href="#">
-          <span class="posts__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl.</span>
-          <span class="posts__date">December 23, 2020</span>
-        </a>
-      </li>
-      <li class="posts__item">
-        <a class="posts__link" href="#">
-          <span class="posts__title">Ac condimentum arcu massa bibendum.</span>
-          <span class="posts__date">December 23, 2020</span>
-        </a>
-      </li>
-      <li class="posts__item">
-        <a class="posts__link" href="#">
-          <span class="posts__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum.</span>
-          <span class="posts__date">December 23, 2020</span>
-        </a>
-      </li>
-    </ul>
+    <div class="container">
+      <ul class="posts__list">
+        <li class="posts__item">
+          <div class="posts_post-preview post-preview">
+            <a class="post-preview__link" href="#">
+              <span class="post-preview__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl.</span>
+            </a>
+            <span class="post-preview__date">December 23, 2020</span>
+          </div>
+        </li>
+        <li class="posts__item">
+          <div class="posts_post post-preview">
+            <a class="post-preview__link" href="#">
+              <span class="post-preview__title">Ac condimentum arcu massa bibendum.</span>
+            </a>
+            <span class="post-preview__date">December 23, 2020</span>
+          </div>
+        </li>
+        <li class="posts__item">
+          <div class="posts_post post-preview">
+            <a class="post-preview__link" href="#">
+              <span class="post-preview__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum.</span>
+            </a>
+            <span class="post-preview__date">December 23, 2020</span>
+          </div>
+        </li>
+        <li class="posts__item">
+          <div class="posts_post post-preview">
+            <a class="post-preview__link" href="#">
+              <span class="post-preview__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl.</span>
+            </a>
+            <span class="post-preview__date">December 23, 2020</span>
+          </div>
+        </li>
+        <li class="posts__item">
+          <div class="posts_post post-preview">
+            <a class="post-preview__link" href="#">
+              <span class="post-preview__title">Ac condimentum arcu massa bibendum.</span>
+            </a>
+            <span class="post-preview__date">December 23, 2020</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="posts__link-pager link-pager">
+        link pager
+      </div>
+    </div>
   </section>
 
 </div>

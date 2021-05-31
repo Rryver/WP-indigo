@@ -11,7 +11,7 @@ $this->title = 'About';
   <section class="about">
     <div class="container">
 
-      <h1 class="about__title font-heading-1"><?= Html::encode($this->title) ?></h1>
+      <h2 class="about__title font-heading-1"><?= Html::encode($this->title) ?></h2>
 
       <div class="about__description description">
         <p class="description__text">

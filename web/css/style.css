@@ -135,6 +135,13 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+.link-text {
+  color: #555555;
+}
+.link-text:hover {
+  color: #3F51B5;
+  border-bottom: 1px solid #1A1A1A;
+}
 .hyperlink {
   font-size: 16px;
   line-height: 1.5em;
@@ -296,6 +303,74 @@ body {
 .ad-info__link:hover {
   color: #3F51B5;
   border-bottom: 1px solid #1A1A1A;
+}
+.posts {
+  margin-top: 60px;
+}
+.posts__item {
+  margin-bottom: 34px;
+}
+.posts__item:last-child {
+  margin-bottom: 0;
+}
+.posts__link-pager {
+  text-align: center;
+  margin-top: 49px;
+}
+.post-preview__link {
+  color: #555555;
+}
+.post-preview__link:hover {
+  color: #3F51B5;
+  border-bottom: 1px solid #1A1A1A;
+}
+.post-preview__title {
+  display: inline-block;
+  max-width: 345px;
+  width: 100%;
+}
+.post-preview__date {
+  display: inline-block;
+  float: right;
+}
+.post__header {
+  text-align: center;
+}
+.post__title {
+  text-align: center;
+}
+.post__info {
+  margin-top: 29px;
+}
+.post__date {
+  margin-left: 37px;
+}
+.post__image-author {
+  display: inline-block;
+  border-radius: 50%;
+}
+.post__content {
+  margin-top: 45px;
+}
+.post__share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 45px;
+}
+.post__conversation {
+  margin-top: 60px;
+}
+.post__comments {
+  margin-top: 60px;
 }
 .footer {
   padding: 60px 0;

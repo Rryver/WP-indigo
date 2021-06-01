@@ -2,9 +2,11 @@
 
 /**
  * @var $this \yii\web\View
+ * @var $modelUser \app\models\User
  */
 
-?>
+use app\models\Post;
+use yii\helpers\Url; ?>
 
 <div class="site-blog">
   <section class="person-preview">
@@ -17,55 +19,21 @@
       <?= $this->render("@views/layouts/split-line") ?>
   </div>
 
+
   <section class="posts">
     <div class="container">
       <ul class="posts__list">
-        <li class="posts__item">
-          <div class="posts_post-preview post-preview">
-            <a class="post-preview__link" href="#">
-              <span class="post-preview__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl.</span>
-            </a>
-            <span class="post-preview__date">December 23, 2020</span>
-          </div>
-        </li>
-        <li class="posts__item">
-          <div class="posts_post post-preview">
-            <a class="post-preview__link" href="#">
-              <span class="post-preview__title">Ac condimentum arcu massa bibendum.</span>
-            </a>
-            <span class="post-preview__date">December 23, 2020</span>
-          </div>
-        </li>
-        <li class="posts__item">
-          <div class="posts_post post-preview">
-            <a class="post-preview__link" href="#">
-              <span class="post-preview__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum.</span>
-            </a>
-            <span class="post-preview__date">December 23, 2020</span>
-          </div>
-        </li>
-        <li class="posts__item">
-          <div class="posts_post post-preview">
-            <a class="post-preview__link" href="#">
-              <span class="post-preview__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl.</span>
-            </a>
-            <span class="post-preview__date">December 23, 2020</span>
-          </div>
-        </li>
-        <li class="posts__item">
-          <div class="posts_post post-preview">
-            <a class="post-preview__link" href="#">
-              <span class="post-preview__title">Ac condimentum arcu massa bibendum.</span>
-            </a>
-            <span class="post-preview__date">December 23, 2020</span>
-          </div>
-        </li>
+        <?php foreach (Post::getAll() as $post) { ?>
+          <li class="posts__item">
+            <div class="posts_post-preview post-preview">
+              <a class="post-preview__link" href="<?= Url::to(['site/post', 'id' => $post->id]) ?>">
+                <span class="post-preview__title"><?= $post->title ?></span>
+              </a>
+              <span class="post-preview__date">December 23, 2020</span>
+            </div>
+          </li>
+        <?php } ?>
       </ul>
 
-      <div class="posts__link-pager link-pager">
-        link pager
-      </div>
-    </div>
-  </section>
 
 </div>

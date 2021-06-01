@@ -15,8 +15,8 @@ $config = [
     ],
     'components' => [
         'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
+//            'enablePrettyUrl' => true,
+//            'showScriptName' => false,
 //            'enableStrictParsing' => true,
         ],
         'request' => [

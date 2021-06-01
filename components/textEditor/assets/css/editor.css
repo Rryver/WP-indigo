@@ -1,0 +1,19 @@
+.text-editor {}
+
+.text-editor__header {}
+
+.text-editor__menu {}
+
+.menu {}
+
+.menu__list {}
+
+.menu__item {
+    display: inline-block;
+    margin-right: 10px;
+}
+.menu__item:last-child {
+    margin-right: 0;
+}
+
+.menu__btn {}

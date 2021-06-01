@@ -6,6 +6,7 @@
 
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\helpers\Html;
 use yii\widgets\Menu;
 
 ?>
@@ -27,6 +28,12 @@ use yii\widgets\Menu;
                 ['label' => 'Home', 'url' => ['site/index']],
                 ['label' => 'About', 'url' => ['site/about']],
                 ['label' => 'Blog', 'url' => ['site/blog']],
+                Yii::$app->user->isGuest ? (
+                ['label' => 'Login', 'url' => ['/site/login']]
+                ) : ['label' => 'Logout',
+                    'url' => ['site/logout'],
+                    'template' => '<a class="nav-menu__link" href="{url}" data-method="post">{label}</a>'
+                ],
             ],
             'activeCssClass' => 'nav-menu__item_active',
         ]);

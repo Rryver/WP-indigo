@@ -147,7 +147,8 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionBlog () {
+    public function actionBlog()
+    {
         $modelUser = new User();
 
         return $this->render('blog', [
@@ -155,7 +156,8 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionPost($id = null) {
+    public function actionPost($id = null)
+    {
         if ($id !== null) {
             $post = Post::getPostById($id);
             return $this->render('post', [
@@ -164,5 +166,54 @@ class SiteController extends Controller
         }
 
         return $this->goHome();
+    }
+
+
+    public function actionCreate()
+    {
+        if (Yii::$app->user->isGuest) { $this->redirect('/'); }
+
+        $post = new Post();
+
+        if ($post->load(Yii::$app->request->post()) && $post->save()) {
+//            return $this->render('post', [
+//                'post' => $post,
+//            ]);
+        }
+
+        $post->title = $_POST['Post']['title'];
+        isset($_POST['text']) ? $post->text = $_POST['text'] : $post->text = '';
+
+        if ($post->save()) {
+            return $this->render('post', [
+                'post' => $post,
+            ]);
+        }
+
+        return $this->render('post-edit', [
+            'post' => $post,
+        ]);
+    }
+
+    public function actionEdit($id = null)
+    {
+        if (Yii::$app->user->isGuest) { return $this->redirect('/'); }
+
+        $post = Post::getPostById($id);
+        if ($post == null) { $this->redirect('/'); }
+
+        // if save changes
+        if ($post->load(Yii::$app->request->post()) && $post->save()) {
+
+            return $this->render('post-editor', [
+                'post' => $post,
+            ]);
+        }
+
+        //if create new post
+        $post = new Post();
+        return $this->render('post-edit', [
+            'post' => $post,
+        ]);
     }
 }

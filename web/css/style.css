@@ -166,6 +166,7 @@ body {
 .btn-common:hover {
   cursor: pointer;
   background: #3F51B5;
+  color: #FFFFFF;
 }
 .text-list > li:before {
   display: inline-block;
@@ -317,6 +318,10 @@ body {
   text-align: center;
   margin-top: 49px;
 }
+.posts__btn-new-post {
+  display: inline-block;
+  margin-bottom: 30px;
+}
 .post-preview__link {
   color: #555555;
 }
@@ -371,6 +376,20 @@ body {
 }
 .post__comments {
   margin-top: 60px;
+}
+.post-editor__title {
+  text-align: center;
+}
+.form-post__label {
+  display: block;
+}
+.form-post__input {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+}
+.form-post__input_textarea {
+  min-height: 400px;
 }
 .footer {
   padding: 60px 0;

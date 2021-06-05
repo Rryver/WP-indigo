@@ -38,7 +38,7 @@ use app\components\textEditor\TextEditor;
               <?= $post->text ?>
           </p>
 
-          <?= TextEditor::widget() ?>
+<!--          --><?//= TextEditor::widget() ?>
 
         </div>
 

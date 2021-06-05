@@ -29,7 +29,8 @@ class Post extends ActiveRecord
     public function rules()
     {
         return [
-
+            [['title'], 'required', 'message' => 'Enter title'],
+            [['title', 'text'], 'string'],
         ];
     }
 
